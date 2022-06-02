@@ -1,0 +1,163 @@
+body {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* WELCOME-PAGE */
+.welcome-page .wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
+  height: 100vh;
+
+  padding-bottom: 6rem;
+}
+
+.photos {
+  position: relative;
+  margin-block: 2rem;
+}
+
+.photos div {
+  width: 40%;
+  height: 50%;
+
+  object-fit: cover;
+  overflow: hidden;
+
+  background-color: var(--primary);
+  border: 2px solid white;
+  border-radius: 2rem;
+}
+
+.photos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.photos .pic-2 {
+  height: 60%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pic-3 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+header h1,
+header p {
+  margin-bottom: 2.5rem;
+}
+
+header h1 {
+  font-size: 4.5rem;
+  line-height: 5.3rem;
+
+  width: 75%;
+}
+
+header p {
+  line-height: 2.4rem;
+}
+
+#signup {
+  display: block;
+
+  padding-block: 1rem;
+
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primary);
+  font-weight: 500;
+
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-top: 4rem;
+}
+
+.login p {
+  color: var(--gray);
+}
+
+.login a {
+  color: white;
+  font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+  body {
+    color: black;
+
+    background-color: white;
+  }
+
+  body::before {
+    content: "";
+    height: 100vh;
+    width: 50%;
+
+    background: var(--primary);
+
+    display: block;
+
+    position: absolute;
+    border-radius: 0 5rem 5rem 0;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photos,
+  .content {
+    grid-row: span 2;
+  }
+
+  .content {
+    align-self: center;
+    justify-self: center;
+    padding-left: 6rem;
+  }
+
+  .photos {
+    margin-right: 10rem;
+    margin-block: 5rem 0;
+  }
+
+  div.pic-2 {
+    width: 60%;
+  }
+
+  #signup {
+    color: white;
+    background-color: var(--primary);
+  }
+
+  .login p {
+    color: black;
+  }
+
+  .login a {
+    color: var(--primary);
+  }
+}
