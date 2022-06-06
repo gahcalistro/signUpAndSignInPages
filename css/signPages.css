@@ -1,0 +1,187 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+
+  height: 100vh;
+}
+
+body,
+a,
+button {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 1rem;
+  border: 1px solid var(--gray);
+  border-radius: 0.5rem;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background: var(--primary);
+
+  padding: 1rem;
+
+  border-radius: 0.5rem;
+
+  color: white;
+}
+
+/* SIGNUP PAGE */
+.signupPage header {
+  margin-bottom: 4.5rem;
+}
+
+.signupPage header p,
+.signinPage header p {
+  color: var(--gray-paragraph);
+  font-weight: 400;
+}
+
+.signupPage label:not(label[for="agree"]),
+.signupPage input:not(input[type="checkbox"]) {
+  margin-bottom: 0.5rem;
+}
+
+.signupPage form div:nth-child(4) {
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+
+  margin-block: 2.3rem;
+}
+
+.signupPage form div:nth-child(4) input {
+  order: 1;
+}
+
+.signupPage form div:nth-child(4) label {
+  order: 2;
+}
+
+/* SIGNIN PAGE */
+.signinPage header {
+  margin-bottom: 3rem;
+}
+
+.signinPage label:not(label[for="remember"]),
+.signinPage input:not(input[type="checkbox"]) {
+  margin-bottom: 0.5rem;
+}
+
+.signinPage form div:nth-child(3) {
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+
+  margin-block: 2.3rem;
+}
+
+.signinPage form div:nth-child(3) input {
+  order: 1;
+}
+
+.signinPage form div:nth-child(3) label {
+  order: 2;
+}
+
+/* SIGNIN SECTION */
+.signinSection header {
+  position: relative;
+
+  margin-bottom: 3rem;
+}
+
+.signinSection header p {
+  text-align: center;
+
+  margin-top: 2rem;
+}
+
+.signinSection header p::after,
+.signinSection header p::before {
+  content: "";
+  width: 30%;
+  height: 1px;
+
+  background-color: var(--gray-paragraph);
+
+  display: block;
+  position: absolute;
+
+  top: 50%;
+}
+
+.signinSection header p::before {
+  right: 0;
+}
+
+.socialLogin {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 4rem;
+}
+
+.socialLogin a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 15rem;
+
+  padding: 1rem 2rem;
+
+  border: 1px solid var(--gray-paragraph);
+  border-radius: 0.5rem;
+}
+
+.socialLogin svg {
+  width: 2rem;
+}
+
+.login {
+  display: flex;
+  gap: 1rem;
+}
+
+.login p {
+  color: #a2a6ac;
+}
+
+.login a {
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.photos {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .photos {
+    display: initial;
+    margin: 5rem 9rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content {
+    align-self: center;
+  }
+}
